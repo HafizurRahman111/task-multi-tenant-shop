@@ -1,0 +1,77 @@
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.actions a,
+.actions button {
+    margin-left: 5px;
+}
+
+.thead-dark th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.btn-sm {
+    padding: 0.3rem 0.5rem;
+}
+
+.row.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.table-responsive {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.table thead th,
+.table tbody td {
+    white-space: nowrap;
+}
+
+.actions {
+    white-space: nowrap;
+}
+
+/* Responsive table styling */
+@media (max-width: 768px) {
+    .table thead {
+        display: none;
+        /* Hide headers for small screens */
+    }
+
+    .table tbody td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .table tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .table tbody td.actions {
+        text-align: center;
+    }
+
+    .table tbody td.actions::before {
+        display: none;
+    }
+}
